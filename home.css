@@ -86,6 +86,7 @@ body.dark-mode {
 
 body{
   transition: transform 0.4s ease, opacity 0.4s ease;
+  animation: sec .8s;
 }
 
 .exit-animation {
@@ -93,21 +94,15 @@ body{
   opacity: 0;
 }
 
-section  {
-  animation: sec .8s both ;
-}
-
 
 @keyframes sec {
 
   0%{
-    scale: 1.1;
+    transform: scale(1.1);
     opacity: 0;
   }
 
   100% {
-    scale: 1;
-    opacity: 1;
   }
 }
 
