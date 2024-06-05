@@ -90,7 +90,7 @@ body{
 }
 
 .exit-animation {
-  transform: scale(1.09);
+  transform: scale(1.1);
   opacity: 0;
 }
 
