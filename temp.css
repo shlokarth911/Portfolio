@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+
+::selection {
+    background-color: #455ce9; /* Change to the desired background color */
+    color: #fff; /* Change to the desired text color */
+  }
+  
+  body {
+    background-color: #111111;
+    animation: sec .8s; 
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  
+  .exit-animation {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  
+  @keyframes sec {
+  
+    0%{
+      scale: 1.1;
+      opacity: 0;
+    }
+  
+    100% {
+      scale: 1;
+      opacity: 1;
+    }
+}
+
+.header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    justify-content:center ;
+}
+
+.header h1 {
+    font-size: 80px;
+    font-weight: 300;
+}
+
+.header h3 {
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.header h2 {
+    font-size: 32px;
+}
+
+.header h2 a {
+    text-decoration: none;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to right ,#4285f4, #bb001b ,#ea4335,#fbbc05,#34a853);
+    background-size: 250%;
+    font-size: 40px;
+    transition: all .5s;
+}
+
+.header h2 a:hover {
+    background-position: 100%;
+}
+
+.button {
+    height: 70px;
+    width: 300px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 30px;
+    border: 2px solid #252525;
+    overflow: hidden;
+    border-radius: 70px;
+    color: #333;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-txt {
+    z-index: 1;
+    letter-spacing: 4px;
+    font-weight: 300;
+  }
+  
+  .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #455ce9;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+  .button:hover {
+    box-shadow: 1px 1px 200px #455ce9;
+    color: #fff;
+    border: none;
+  }
+  
+  .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+  }
+
+
+@media (max-width:375px) {
+    .header h1 {
+        font-size: 45px;
+    }
+}
